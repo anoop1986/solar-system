@@ -18,10 +18,11 @@ jobs:
             run: npm install
           - name: testing npm
             run: npm test
-          - name: starting the app
-            run: npm start
-          - name: stopping the app
-            run: npm stop
+          - name: Saving the test result
+            uses: actions/upload-artifact@v4
+            with: 
+              name: test-result
+              path: test-result.txt
         
         
       

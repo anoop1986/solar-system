@@ -10,14 +10,14 @@ jobs:
          name: unit-testing
          runs-on : ubuntu-latest
          steps:
-         - name: checkout repo
-           uses: actions/checkout@v4
-         - name: steup nodejs
-           uses: actions/setup-node@v4
-         - name: install dependencies
-           run: npm install
-        - name: testing npm
-          run: npm test
+          - name: checkout repo
+            uses: actions/checkout@v4
+          - name: steup nodejs
+            uses: actions/setup-node@v4
+          - name: install dependencies
+            run: npm install
+          - name: testing npm
+            run: npm test
         
         
       

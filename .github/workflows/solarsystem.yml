@@ -20,6 +20,8 @@ jobs:
             run: npm test
           - name: starting the app
             run: npm start
+          - name: stopping the app
+            run: npm stop
         
         
       

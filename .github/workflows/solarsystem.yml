@@ -18,6 +18,8 @@ jobs:
             run: npm install
           - name: testing npm
             run: npm test
+          - name: starting the app
+            run: npm start
         
         
       

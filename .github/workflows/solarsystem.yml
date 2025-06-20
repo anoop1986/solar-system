@@ -1,0 +1,24 @@
+name: solar-system
+on:
+    push
+env:
+     MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+     MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
+     MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+jobs:
+   unit-testing:
+         name: unit-testing
+         runs-on : ubuntu-latest
+         steps:
+          -name: checkout repo
+           uses: actions/checkout@v4
+         - name: steup nodejs
+           uses: actions/setup-node@v4
+         - name: install dependencies
+           run: npm install
+        - name: testing npm
+          run: npm test
+        
+        
+      
+     

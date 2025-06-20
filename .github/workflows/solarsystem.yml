@@ -18,6 +18,8 @@ jobs:
             run: npm install
           - name: testing npm
             run: npm test
+          - name: listing dir
+            run: ls -l
           - name: Saving the test result
             uses: actions/upload-artifact@v4
             with: 

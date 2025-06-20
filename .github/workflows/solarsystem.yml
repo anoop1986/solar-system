@@ -38,6 +38,11 @@ jobs:
           - name: code-coverage
             continue-on-error: true
             run: npm run coverage
+          - name: saving the coverage artifact
+            uses: actions/upload-artifact@v4
+            with:
+             name: coverage-result
+             path: coverage
             
           
     

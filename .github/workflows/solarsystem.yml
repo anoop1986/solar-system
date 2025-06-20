@@ -25,9 +25,21 @@ jobs:
             with: 
               name: test-results
               path: test-results.xml
-          - name: Coverage
+   Code-Coverage:
+         name: code-coverage
+         runs-on: ubuntu-latest
+         steps:
+          - name: checkout repo
+            uses: actions/checkout@v4
+          - name: setup-nodejs
+            uses: actions/setup-node@v4
+          - name: install dependencies
+            run: npm install
+          - name: code-coverage
             run: npm run coverage
-        
+            
+          
+    
         
       
      

@@ -25,6 +25,8 @@ jobs:
             with: 
               name: test-results
               path: test-results.xml
+          - name: Coverage
+            run: npm run coverage
         
         
       
